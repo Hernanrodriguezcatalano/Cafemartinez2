@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+</head>
+
+
+
+<header></header>
+
+<!-- Menu -->
+
+<section></section>
+
+            <div class="fila">
+
+                <div class="amarillo" onclick="autocompletar('101', 'Champagne Chandon 187cc')">
+                    <div class="Codigo">
+                        <h6>101</h6>
+                    </div>
+                    <h6>Champagne Chandon 187cc</h6>
+                </div>
+                
+                <div class="celeste" onclick="autocompletar('104', 'Cinzano')">
+                    <div class="Codigo">
+                        <h6>104</h6>
+                    </div>
+                    <h6>Cinzano</h6>
+                </div>
+                
+                <div class="amarillo" onclick="autocompletar('108', 'Fernet Branca')">
+                    <div class="Codigo">
+                        <h6>108</h6>
+                    </div>
+                    <h6>Fernet Branca</h6>
+                </div>
+                
+                <div class="turquesa" onclick="autocompletar('109', 'Gancia')">
+                    <div class="Codigo">
+                        <h6>109</h6>
+                    </div>
+                    <h6>Gancia</h6>
+                </div>
+                
+                <div class="verde" onclick="autocompletar('110', 'Gin Tonic')">
+                    <div class="Codigo">
+                        <h6>110</h6>
+                    </div>
+                    <h6>Gin Tonic</h6>
+                </div>
+                
+                <div class="verdeclaro" onclick="autocompletar('120', 'Vino Tinto 375cc')">
+                    <div class="Codigo">
+                        <h6>120</h6>
+                    </div>
+                    <h6>Vino Tinto 375cc</h6>
+                </div>
+                
+                <div class="marron" onclick="autocompletar('123', 'Whisky Vat 69')">
+                    <div class="Codigo">
+                        <h6>123</h6>
+                    </div>
+                    <h6>Whisky Vat 69</h6>
+                </div>
+                
+                <div class="rojo" onclick="autocompletar('124', 'Whisky Chivas Regal')">
+                    <div class="Codigo">
+                        <h6>124</h6>
+                    </div>
+                    <h6>Whisky Chivas Regal</h6>
+                </div>
+                
+                <div class="rojo" onclick="autocompletar('126', 'Whisky J&B')">
+                    <div class="Codigo">
+                        <h6>126</h6>
+                    </div>
+                    <h6>Whisky J&B</h6>
+                </div>
+                
+                <div class="rosado" onclick="autocompletar('128', 'Whisky Jack Daniels')">
+                    <div class="Codigo">
+                        <h6>128</h6>
+                    </div>
+                    <h6>Whisky Jack Daniels</h6>
+                </div>
+                
+                <div class="marron" onclick="autocompletar('129', 'Whisky Johnnie Walker (Black Label)')">
+                    <div class="Codigo">
+                        <h6>129</h6>
+                    </div>
+                    <h6>Whisky Johnnie Walker (Black Label)</h6>
+                </div>
+                
+                <div class="rosadoclaro" onclick="autocompletar('130', 'Whisky Nacional')">
+                    <div class="Codigo">
+                        <h6>130</h6>
+                    </div>
+                    <h6>Whisky Nacional</h6>
+                </div>
+                
+
+</div>                
+    </div>
+
+
+<!-- Formulario -->
+<form></form>
+
+</main>
+
+<footer></footer>
+
+</body>
+<!-- Mantiene abierto el menu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menuButton");
+        const dropdownContent = document.querySelector(".dropdown-content");
+        let isOpen = false; // Variable para rastrear el estado del menú
+
+        menuButton.addEventListener("mouseenter", function (e) {
+            if (!isOpen) {
+                dropdownContent.style.display = "block";
+                dropdownContent.style.opacity = 1;
+                dropdownContent.style.pointerEvents = "auto";
+                isOpen = true; // Abre el menú en la primera interacción
+            } else {
+                dropdownContent.style.display = "none";
+                dropdownContent.style.opacity = 0;
+                dropdownContent.style.pointerEvents = "none";
+                isOpen = false; // Cierra el menú en la segunda interacción
+            }
+        });
+    });
+    </script>
+
+<!-- Botón de subir -->
+<a href="#top">
+    <div class="boton-subir">
+        <label for="showScrollButton">
+            <span>&#8593;</span>
+        </label>
+    </div>
+</a>
+
+<script>
+    window.addEventListener("scroll", function () {
+        var botonSubir = document.querySelector(".boton-subir");
+
+        // Si el usuario ha desplazado más de 300 píxeles hacia abajo, muestra el botón
+        if (window.scrollY > 300) {
+            botonSubir.style.display = "block";
+        } else {
+            botonSubir.style.display = "none";
+        }
+    });
+</script>
+<link rel="stylesheet"
+    href="https://cafemartinez.vtexassets.com/_v/public/assets/v1/bundle/css/asset.min.css?v=3&amp;files=theme,cafemartinez.store@3.0.41$style.common,cafemartinez.store@3.0.41$style.small,cafemartinez.store@3.0.41$style.notsmall,cafemartinez.store@3.0.41$style.large,cafemartinez.store@3.0.41$style.xlarge&amp;files=fonts,ebda5b7f33d97a654d0dee0aac558a02d0c8b879&amp;files=npm,animate.css@3.7.0/animate.min.css&amp;files=react~vtex.render-runtime@8.134.1,common&amp;files=react~vtex.store-components@3.169.0,Container,4,SearchBar,Logo&amp;files=react~vtex.styleguide@9.146.9,0,1,Spinner&amp;files=react~vtex.admin-pages@4.51.2,HighlightOverlay&amp;files=react~vtex.modal-layout@0.14.1,0&amp;files=react~vtex.flex-layout@0.21.3,0&amp;files=react~vtex.rich-text@0.16.0,index&amp;files=react~cafemartinez.store@3.0.41,GlobalCss,NotificationBar,FormNewsletterPopUp&amp;files=react~vtex.login@2.57.0,1&amp;files=react~vtex.minicart@2.67.1,Minicart&amp;files=react~vtex.search@2.16.5,Autocomplete&amp;files=overrides,vtex.product-list@0.37.1$overrides,vtex.minicart@2.67.1$overrides,cafemartinez.store@3.0.41$overrides,cafemartinez.store@3.0.41$fonts&amp;workspace=master"
+    crossorigin="" class="vtex_io_uncritical_css" id="uncritical_style_0">
+    <script src="./Js/header.js"></script>
+    <script src="../Js/headerpaginas.js"></script>
+    <script src="../Js/footer.js"></script>
+    <script src="../Js/formulario.js"></script>
+    <script src="../Js/head.js"></script>
+    <script src="../Js/menu.js"></script>
+    <script src="./Js/Java.Js"></script>
+    <script src="../Js/auth.js"></script>
+
+</html>

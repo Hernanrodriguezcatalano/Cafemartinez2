@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+</head>
+
+
+
+<header></header>
+
+<!-- Menu -->
+
+<section></section>
+            <div class="fila">
+
+                <div class="amarillo" onclick="autocompletar('319', '1/2 Jugo de Naranja')">
+                    <div class="Codigo">
+                        <h6>319</h6>
+                    </div>
+                    <h6>1/2 Jugo de Naranja</h6>
+                </div>
+                
+                <div class="celeste" onclick="autocompletar('320', '1/2 Jugo de Pomelo')">
+                    <div class="Codigo">
+                        <h6>320</h6>
+                    </div>
+                    <h6>1/2 Jugo de Pomelo</h6>
+                </div>
+                
+                <div class="amarillo" onclick="autocompletar('322', 'Jugo de Naranja')">
+                    <div class="Codigo">
+                        <h6>322</h6>
+                    </div>
+                    <h6>Jugo de Naranja</h6>
+                </div>
+                
+                <div class="turquesa" onclick="autocompletar('323', 'Jugo de Pomelo')">
+                    <div class="Codigo">
+                        <h6>323</h6>
+                    </div>
+                    <h6>Jugo de Pomelo</h6>
+                </div>
+                
+                <div class="verde" onclick="autocompletar('334', 'Licuados con Agua')">
+                    <div class="Codigo">
+                        <h6>334</h6>
+                    </div>
+                    <h6>Licuados con Agua</h6>
+                </div>
+                
+                <div class="verdeclaro" onclick="autocompletar('335', 'Licuados con Jugo')">
+                    <div class="Codigo">
+                        <h6>335</h6>
+                    </div>
+                    <h6>Licuados con Jugo</h6>
+                </div>
+                
+                <div class="marron" onclick="autocompletar('336', 'Licuados con Leche')">
+                    <div class="Codigo">
+                        <h6>336</h6>
+                    </div>
+                    <h6>Licuados con Leche</h6>
+                </div>
+                
+                <div class="rojo" onclick="autocompletar('1952', 'Limonada')">
+                    <div class="Codigo">
+                        <h6>1952</h6>
+                    </div>
+                    <h6>Limonada</h6>
+                </div>
+                
+                <div class="turquesa" onclick="autocompletar('2432', 'Batido de Arandanos')">
+                    <div class="Codigo">
+                        <h6>2432</h6>
+                    </div>
+                    <h6>Batido de Arandanos</h6>
+                </div>
+                
+                <div class="turquesa" onclick="autocompletar('2711', 'Granizado Frutos Rojos y Naranja')">
+                    <div class="Codigo">
+                        <h6>2711</h6>
+                    </div>
+                    <h6>Granizado Frutos Rojos y Naranja</h6>
+                </div>
+                
+                <div class="azul" onclick="autocompletar('2712', 'Granizado Maracuya y Naranja')">
+                    <div class="Codigo">
+                        <h6>2712</h6>
+                    </div>
+                    <h6>Granizado Maracuya y Naranja</h6>
+                </div>
+                
+                <div class="verdeclaro" onclick="autocompletar('3308', 'Batidos')">
+                    <div class="Codigo">
+                        <h6>3308</h6>
+                    </div>
+                    <h6>Batidos</h6>
+                </div>
+                
+                <div class="naranja" onclick="autocompletar('3309', 'Granizados')">
+                    <div class="Codigo">
+                        <h6>3309</h6>
+                    </div>
+                    <h6>Granizados</h6>
+                </div>
+                
+                <div class="morado" onclick="autocompletar('3736', 'Naranjada de Hibiscus')">
+                    <div class="Codigo">
+                        <h6>3736</h6>
+                    </div>
+                    <h6>Naranjada de Hibiscus</h6>
+                </div>
+                
+                <div class="turquesa" onclick="autocompletar('3890', 'Licuado con leche de Almendras')">
+                    <div class="Codigo">
+                        <h6>3890</h6>
+                    </div>
+                    <h6>Licuado con leche de Almendras</h6>
+                </div>
+                
+                <div class="rosado" onclick="autocompletar('4314', 'Batido de Frutilla y Naranja')">
+                    <div class="Codigo">
+                        <h6>4314</h6>
+                    </div>
+                    <h6>Batido de Frutilla y Naranja</h6>
+                </div>
+                
+            </div>
+    </div>
+
+
+
+
+<!-- Formulario -->
+<form></form>
+
+</main>
+
+<footer></footer>
+
+</body>
+<!-- Mantiene abierto el menu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menuButton");
+        const dropdownContent = document.querySelector(".dropdown-content");
+        let isOpen = false; // Variable para rastrear el estado del menú
+
+        menuButton.addEventListener("mouseenter", function (e) {
+            if (!isOpen) {
+                dropdownContent.style.display = "block";
+                dropdownContent.style.opacity = 1;
+                dropdownContent.style.pointerEvents = "auto";
+                isOpen = true; // Abre el menú en la primera interacción
+            } else {
+                dropdownContent.style.display = "none";
+                dropdownContent.style.opacity = 0;
+                dropdownContent.style.pointerEvents = "none";
+                isOpen = false; // Cierra el menú en la segunda interacción
+            }
+        });
+    });
+    </script>
+
+<!-- Botón de subir -->
+<a href="#top">
+    <div class="boton-subir">
+        <label for="showScrollButton">
+            <span>&#8593;</span>
+        </label>
+    </div>
+</a>
+
+<script>
+    window.addEventListener("scroll", function () {
+        var botonSubir = document.querySelector(".boton-subir");
+
+        // Si el usuario ha desplazado más de 300 píxeles hacia abajo, muestra el botón
+        if (window.scrollY > 300) {
+            botonSubir.style.display = "block";
+        } else {
+            botonSubir.style.display = "none";
+        }
+    });
+</script>
+<link rel="stylesheet"
+    href="https://cafemartinez.vtexassets.com/_v/public/assets/v1/bundle/css/asset.min.css?v=3&amp;files=theme,cafemartinez.store@3.0.41$style.common,cafemartinez.store@3.0.41$style.small,cafemartinez.store@3.0.41$style.notsmall,cafemartinez.store@3.0.41$style.large,cafemartinez.store@3.0.41$style.xlarge&amp;files=fonts,ebda5b7f33d97a654d0dee0aac558a02d0c8b879&amp;files=npm,animate.css@3.7.0/animate.min.css&amp;files=react~vtex.render-runtime@8.134.1,common&amp;files=react~vtex.store-components@3.169.0,Container,4,SearchBar,Logo&amp;files=react~vtex.styleguide@9.146.9,0,1,Spinner&amp;files=react~vtex.admin-pages@4.51.2,HighlightOverlay&amp;files=react~vtex.modal-layout@0.14.1,0&amp;files=react~vtex.flex-layout@0.21.3,0&amp;files=react~vtex.rich-text@0.16.0,index&amp;files=react~cafemartinez.store@3.0.41,GlobalCss,NotificationBar,FormNewsletterPopUp&amp;files=react~vtex.login@2.57.0,1&amp;files=react~vtex.minicart@2.67.1,Minicart&amp;files=react~vtex.search@2.16.5,Autocomplete&amp;files=overrides,vtex.product-list@0.37.1$overrides,vtex.minicart@2.67.1$overrides,cafemartinez.store@3.0.41$overrides,cafemartinez.store@3.0.41$fonts&amp;workspace=master"
+    crossorigin="" class="vtex_io_uncritical_css" id="uncritical_style_0">
+    <script src="./Js/header.js"></script>
+    <script src="../Js/headerpaginas.js"></script>
+    <script src="../Js/footer.js"></script>
+    <script src="../Js/formulario.js"></script>
+    <script src="../Js/head.js"></script>
+    <script src="../Js/menu.js"></script>
+    <script src="./Js/Java.Js"></script>
+    <script src="../Js/auth.js"></script>
+
+</html>

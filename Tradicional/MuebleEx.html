@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+</head>
+
+
+
+<header></header>
+
+<!-- Menu -->
+
+<section></section>
+            <div class="fila">
+
+                <div class="beige" onclick="autocompletar('18', 'Alfajor MTZ blanco')">
+                    <div class="Codigo">
+                        <h5>18</h5>
+                    </div>
+                    <h5>Alfajor MTZ blanco</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('19', 'Alfajor MTZ Negro')">
+                    <div class="Codigo">
+                        <h5>19</h5>
+                    </div>
+                    <h5>Alfajor MTZ Negro</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('20', 'Alfajor MTZ x 6u')">
+                    <div class="Codigo">
+                        <h5>20</h5>
+                    </div>
+                    <h5>Alfajor MTZ x 6u</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('2852', 'Mini Alfajor MTZ x 8u')">
+                    <div class="Codigo">
+                        <h5>2852</h5>
+                    </div>
+                    <h5>Mini Alfajor MTZ x 8u</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3015', 'Alfajor MTZ')">
+                    <div class="Codigo">
+                        <h5>3015</h5>
+                    </div>
+                    <h5>Alfajor MTZ</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3306', 'Mini Alfajor')">
+                    <div class="Codigo">
+                        <h5>3306</h5>
+                    </div>
+                    <h5>Mini Alfajor</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3660', 'Alfajor MTZ Maicena')">
+                    <div class="Codigo">
+                        <h5>3660</h5>
+                    </div>
+                    <h5>Alfajor MTZ Maicena</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('4585', 'Alfajor MTZ Mousse')">
+                    <div class="Codigo">
+                        <h5>4585</h5>
+                    </div>
+                    <h5>Alfajor MTZ Mousse</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('22', 'Barrita Cereal Girasol')">
+                    <div class="Codigo">
+                        <h5>22</h5>
+                    </div>
+                    <h5>Barrita Cereal Girasol</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('23', 'Barrita Cereal Mani')">
+                    <div class="Codigo">
+                        <h5>23</h5>
+                    </div>
+                    <h5>Barrita Cereal Mani</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('24', 'Barrita Sesamo')">
+                    <div class="Codigo">
+                        <h5>24</h5>
+                    </div>
+                    <h5>Barrita Sesamo</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('1892', 'Barra de Chocolate')">
+                    <div class="Codigo">
+                        <h5>1892</h5>
+                    </div>
+                    <h5>Barra de  Chocolate</h5>
+                </div>
+                
+
+                
+                
+            </div>
+    </div>
+
+
+
+
+<!-- Formulario -->
+<form></form>
+
+</main>
+
+<footer></footer>
+
+</body>
+<!-- Mantiene abierto el menu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menuButton");
+        const dropdownContent = document.querySelector(".dropdown-content");
+        let isOpen = false; // Variable para rastrear el estado del menú
+
+        menuButton.addEventListener("mouseenter", function (e) {
+            if (!isOpen) {
+                dropdownContent.style.display = "block";
+                dropdownContent.style.opacity = 1;
+                dropdownContent.style.pointerEvents = "auto";
+                isOpen = true; // Abre el menú en la primera interacción
+            } else {
+                dropdownContent.style.display = "none";
+                dropdownContent.style.opacity = 0;
+                dropdownContent.style.pointerEvents = "none";
+                isOpen = false; // Cierra el menú en la segunda interacción
+            }
+        });
+    });
+    </script>
+
+<!-- Botón de subir -->
+<a href="#top">
+    <div class="boton-subir">
+        <label for="showScrollButton">
+            <span>&#8593;</span>
+        </label>
+    </div>
+</a>
+
+<script>
+    window.addEventListener("scroll", function () {
+        var botonSubir = document.querySelector(".boton-subir");
+
+        // Si el usuario ha desplazado más de 300 píxeles hacia abajo, muestra el botón
+        if (window.scrollY > 300) {
+            botonSubir.style.display = "block";
+        } else {
+            botonSubir.style.display = "none";
+        }
+    });
+</script>
+<link rel="stylesheet"
+    href="https://cafemartinez.vtexassets.com/_v/public/assets/v1/bundle/css/asset.min.css?v=3&amp;files=theme,cafemartinez.store@3.0.41$style.common,cafemartinez.store@3.0.41$style.small,cafemartinez.store@3.0.41$style.notsmall,cafemartinez.store@3.0.41$style.large,cafemartinez.store@3.0.41$style.xlarge&amp;files=fonts,ebda5b7f33d97a654d0dee0aac558a02d0c8b879&amp;files=npm,animate.css@3.7.0/animate.min.css&amp;files=react~vtex.render-runtime@8.134.1,common&amp;files=react~vtex.store-components@3.169.0,Container,4,SearchBar,Logo&amp;files=react~vtex.styleguide@9.146.9,0,1,Spinner&amp;files=react~vtex.admin-pages@4.51.2,HighlightOverlay&amp;files=react~vtex.modal-layout@0.14.1,0&amp;files=react~vtex.flex-layout@0.21.3,0&amp;files=react~vtex.rich-text@0.16.0,index&amp;files=react~cafemartinez.store@3.0.41,GlobalCss,NotificationBar,FormNewsletterPopUp&amp;files=react~vtex.login@2.57.0,1&amp;files=react~vtex.minicart@2.67.1,Minicart&amp;files=react~vtex.search@2.16.5,Autocomplete&amp;files=overrides,vtex.product-list@0.37.1$overrides,vtex.minicart@2.67.1$overrides,cafemartinez.store@3.0.41$overrides,cafemartinez.store@3.0.41$fonts&amp;workspace=master"
+    crossorigin="" class="vtex_io_uncritical_css" id="uncritical_style_0">
+    <script src="./Js/header.js"></script>
+    <script src="../Js/headerpaginas.js"></script>
+    <script src="../Js/footer.js"></script>
+    <script src="../Js/formulario.js"></script>
+    <script src="../Js/head.js"></script>
+    <script src="../Js/menu.js"></script>
+    <script src="./Js/Java.Js"></script>
+    <script src="../Js/auth.js"></script>
+
+</html>

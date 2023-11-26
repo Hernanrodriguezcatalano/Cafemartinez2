@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colores.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="Header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <title>Tarifas Precios</title>
+</head>
+
+<header>
+</header>
+
+<body>
+<div class="presentacion2">
+    <h1>Bienvenido a </h1>
+
+    <img src="Img/Cafe_Martinez_Logo.svg.png" width="300" height="300" alt="Logo de la empresa">
+</div>
+    <div class="presentacion">
+
+
+        <p>Somos una empresa apasionada por el café, comprometida con ofrecer la mejor calidad y experiencia a nuestros clientes. Desde nuestros inicios, nos hemos dedicado a seleccionar los granos más finos de las regiones cafetaleras más destacadas, asegurando un sabor excepcional en cada taza.</p>
+
+        <p>Nuestro compromiso con la sostenibilidad nos lleva a trabajar directamente con productores locales, promoviendo prácticas agrícolas respetuosas con el medio ambiente y apoyando a las comunidades cafetaleras. Creemos que un buen café no solo debe ser delicioso, sino también ético y sostenible.</p>
+    
+        <p>En Café Martinez, ofrecemos una amplia variedad de mezclas únicas, desde los cafés suaves y afrutados hasta los más intensos y robustos. Nuestro equipo de expertos catadores trabaja constantemente para perfeccionar nuestras mezclas y brindar a nuestros clientes una experiencia única en cada sorbo.</p>
+    
+        <p>Te invitamos a descubrir nuestro mundo de aromas y sabores. Ya sea que disfrutes de un espresso matutino, un cappuccino cremoso o un café filtrado suave, estamos seguros de que encontrarás la mezcla perfecta para satisfacer tu paladar.</p>
+    
+        <p>Gracias por elegir Café Martinez. ¡Esperamos que disfrutes cada momento con nosotros!</p>
+    
+</div>
+
+        <!-- Columna izquierda para el carrusel -->
+        <div class="column">
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="https://cafemartinez.vtexassets.com/assets/vtex.file-manager-graphql/images/5e5aa813-0eba-455a-9c13-30ae74431a15___85d0e614c6d739f05a76a21e779ffaa6.jpg"
+                        alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cafemartinez.vtexassets.com/assets/vtex.file-manager-graphql/images/2334fdac-2830-46ea-b072-4cd07e5405ef___b7e6d26fef05b1211ad8e24041f785b3.jpg"
+                        alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cafemartinez.vtexassets.com/assets/vtex.file-manager-graphql/images/df176d8f-9123-4a32-9a64-f49414d017a6___44dad4026447ff45095aa727ce4daae0.jpg"
+                        alt="Imagen 3">
+                </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7409209821058!2d-58.4633231!3d-34.5854215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb60a08a96c4f%3A0xa2296badcc431bce!2sStephenson%202890%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1698117984763!5m2!1ses!2sar"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+ 
+    <script>
+        $(document).ready(function () {
+            $(".carousel-container").slick({
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: false
+            });
+        });
+
+    </script>
+
+</body>
+
+
+
+
+
+<footer></footer>
+
+
+
+
+<script>
+    window.addEventListener("scroll", function () {
+        var botonSubir = document.querySelector(".boton-subir");
+
+        // Si el usuario ha desplazado más de 300 píxeles hacia abajo, muestra el botón
+        if (window.scrollY > 300) {
+            botonSubir.style.display = "block";
+        } else {
+            botonSubir.style.display = "none";
+        }
+    });
+</script>
+<footer>
+   
+</footer>
+
+
+<!-- Vinculos -->
+<script src="./Js/header.js"></script>
+<script src="../Js/headerpaginas.js"></script>
+<script src="./Js/footer.js"></script>
+<script src="../Js/formulario.js"></script>
+<script src="../Js/head.js"></script>
+<script src="../Js/menu.js"></script>
+<script src="../Js/Java.Js"></script>
+<script src="./Js/auth.js"></script>
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById("menuButton");
+    const dropdownContent = document.querySelector(".dropdown-content");
+    let isOpen = false; // Variable para rastrear el estado del menú
+
+    menuButton.addEventListener("mouseenter", function(e) {
+        if (!isOpen) {
+            dropdownContent.style.display = "block";
+            dropdownContent.style.opacity = 1;
+            dropdownContent.style.pointerEvents = "auto";
+            isOpen = true; // Abre el menú en la primera interacción
+        } else {
+            dropdownContent.style.display = "none";
+            dropdownContent.style.opacity = 0;
+            dropdownContent.style.pointerEvents = "none";
+            isOpen = false; // Cierra el menú en la segunda interacción
+        }
+    });
+});
+</script>
+
+</body>
+
+</html>

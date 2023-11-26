@@ -1,0 +1,656 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Estilos para el formulario */
+.formulario,
+.plataforma {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.formulario form,
+.plataforma form {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formulario legend,
+.plataforma legend {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.formulario label,
+.plataforma label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="email"],
+.formulario textarea,
+.formulario input[type="radio"],
+.plataforma input[type="radio"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4d3232;
+    border-radius: 4px;
+}
+
+.formulario .radio-group,
+.plataforma .radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input[type="radio"],
+.plataforma input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+.formulario .submit-button,
+.plataforma .submit-button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.formulario .submit-button:hover,
+.plataforma .submit-button:hover {
+    background: #b30000;
+}
+
+
+/* Estilo para el precio en color rojo */
+#cart-items li .price {
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Estilo para el código del artículo */
+#cart-items li .item-code {
+    color: #000000; /* Color de texto más oscuro (casi negro) */
+   
+    font-size: 1 rem; /* Tamaño de fuente ligeramente más grande */
+}
+
+/* Estilo para el nombre del artículo */
+#cart-items li .item-name {
+    color: #000000; /* Color de texto más oscuro (casi negro) */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1 rem; /* Tamaño de fuente ligeramente más grande */
+}
+
+/* Estilo para elementos dentro del carrito */
+#carrito .item {
+    color: red; /* o el color deseado, en este caso, rojo */
+    font-weight: bold;
+}
+
+/* Estilo para el botón "Agregar al carrito" y "Exportar a Excel" */
+.submit-button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 10px; /* Agrega espacio entre los botones */
+}
+
+.submit-button:hover {
+    background: #b30000;
+}
+
+
+
+.boton-regresar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.boton-regresar label {
+    width: 50px;
+    height: 50px;
+    background-color: #677cd6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para el botón de subir */
+.boton-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    /* Ajusta la posición según tu preferencia */
+    z-index: 999;
+    display: none;
+    /* Oculta el botón por defecto */
+}
+
+.boton-subir label {
+    width: 50px;
+    height: 50px;
+    background-color: #677cd6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el botón de subir en hover */
+.boton-subir label:hover {
+    background-color: #4254b5;
+    /* Cambia el color al pasar el cursor sobre el botón */
+}
+
+/* Estilos CSS generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: rgb(185, 120, 120);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 2100px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-areas:
+        "encabezado encabezado encabezado encabezado encabezado encabezado encabezado encabezado encabezado encabezado encabezado"
+        "contenido contenido contenido contenido contenido contenido contenido contenido contenido contenido contenido"
+              /* Cambiamos el área del contenido */
+        "pie pie pie pie pie pie pie pie pie pie pie";
+    padding: 1%;
+    border-radius: 4px;
+}
+
+.contenedor,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .pie {
+    padding: 1%;
+    border-radius: 4px;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+
+.contenedor .encabezado {
+    background: rgb(174, 155, 196);
+    color: #fff;
+    grid-area: encabezado;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    border-radius: 4px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-gap: 1%;
+}
+
+/* Estilos para los contenidos */
+.contenido-favorito {
+    background: rgb(156, 194, 187);
+    color: #0e0c0c;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    grid-column: 1/1;
+    grid-row: 1/3;
+}
+
+.contenido-menu {
+    background: rgb(156, 194, 187);
+    color: #a76767;
+    padding: 2%;
+    font-size: 1rem;
+    grid-column: 1/3;
+    grid-row: 1/12;
+    border: 2px solid black;
+    grid-area: contenido-menu;
+    /* Agregamos un nombre de área */
+}
+
+
+.fullscreen-container {
+    display: flex;
+}
+
+.fullscreen-iframe {
+    flex: 12;
+}
+
+/* Estilos generales para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilos para las celdas */
+td {
+    padding: 10px;
+    text-align: center;
+    border: none;
+}
+
+/* Estilos para las imágenes */
+img {
+    max-width: 200px;
+    height: auto;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Estilos para los encabezados h4 */
+h4 {
+    font-size: 26px;
+    color: #7e7e7e;
+}
+
+/* Estilos para resaltar "Café Martínez" */
+.resaltado {
+    color: #0e0d0d;
+    font-weight: bold;
+}
+
+/* Estilos CSS para centrar texto en las etiquetas h5 dentro de las celdas */
+.contenido-menu,
+.Recuadro-Leyenda,
+.contenido-favorito,
+.rojo,
+.azul,
+.verde,
+.codigo,
+.amarillo,
+.naranja,
+.morado,
+.rosado,
+.turquesa,
+.marron,
+.carmesí,
+.oro,
+.indigo,
+.granate,
+.grisplomo,
+.naranjao,
+.blanco,
+.grisclaro,
+.azulclaro,
+.verdeclaro,
+.amarilloclaro,
+.rosadoclaro,
+.lilaclaro,
+.celesteclaro,
+.salmonclaro,
+.beigeclaro,
+.cyanclaro,
+.verdeclaro,
+.violetaclaro,
+.naranjaclaro,
+.negro,
+.marronclaro,
+.celeste,
+.beige,
+.rosado h5,
+.contenedor .pie,
+.carousel-item img,
+.carousel-item iframe,
+.carousel-container,
+.carousel-item {
+    text-align: center;
+    line-height: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 2048px) {
+    body {
+        background: #d3c2b3;
+    }
+    .column {
+        flex: 1; /* Hace que ambas columnas ocupen el mismo espacio */
+        display: flex;
+        overflow: hidden; /* Ev ita que el contenido desborde */
+        background-color: rgb(66, 61, 54);
+        padding-bottom: 25px;
+    }
+    .fila{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    body {
+        background:#f3d5726f;
+    }
+    .fila {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .beige,
+    .azulclaro,
+    .verdeclaro,
+    .naranja,
+    .rosado,
+    .grisplomo
+    {
+        font-size: 1.5rem;    
+    }
+    .column {
+        flex: 1; /* Hace que ambas columnas ocupen el mismo espacio */
+        display: flex;
+        overflow: hidden; /* Ev ita que el contenido desborde */
+        background-color: rgb(66, 61, 54);
+        padding-bottom: 25px;
+    }
+
+
+
+    /* .contenido-menu,
+    .Recuadro-Leyenda,
+    .container,
+    .contenido-favorito,
+    .rojo,
+    .azul,
+    .verde,
+    .codigo,
+    .amarillo,
+    .naranja,
+    .morado,
+    .rosado,
+    .turquesa,
+    .marron,
+    .carmesí,
+    .oro,
+    .indigo,
+    .granate,
+    .grisplomo,
+    .naranjao,
+    .blanco,
+    .grisclaro,
+    .azulclaro,
+    .verdeclaro,
+    .amarilloclaro,
+    .rosadoclaro,
+    .lilaclaro,
+    .celesteclaro,
+    .salmonclaro,
+    .beigeclaro,
+    .cyanclaro,
+    .verdeclaro,
+    .violetaclaro,
+    .naranjaclaro,
+    .negro,
+    .marronclaro,
+    .celeste,
+    .beige,
+    .rosado h5,
+    .contenedor .pie,
+    .carousel-item img,
+    .carousel-item iframe,
+    .carousel-container,
+    .carousel-item {
+        font-size: 0.5rem;
+    } */
+} 
+
+@media screen and (max-width: 768px) {
+    body {
+        background: #b9d14d;
+    }
+.fila {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 1%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .beige,
+    .azulclaro,
+    .verdeclaro,
+    .naranja,
+    .rosado,
+    .grisplomo
+    {
+        font-size: 1.5rem;    
+    }
+    .column {
+        flex: 1; /* Hace que ambas columnas ocupen el mismo espacio */
+        display: flex;
+        overflow: hidden; /* Ev ita que el contenido desborde */
+        background-color: rgb(66, 61, 54);
+        padding-bottom: 25px;
+    }
+}
+    /*
+    .contenido-menu,
+    .Recuadro-Leyenda,
+    .contenido-favorito,
+    .container,
+    .rojo,
+    .azul,
+    .verde,
+    .codigo,
+    .amarillo,
+    .naranja,
+    .morado,
+    .rosado,
+    .turquesa,
+    .marron,
+    .carmesí,
+    .oro,
+    .indigo,
+    .granate,
+    .grisplomo,
+    .naranjao,
+    .blanco,
+    .grisclaro,
+    .azulclaro,
+    .verdeclaro,
+    .amarilloclaro,
+    .rosadoclaro,
+    .lilaclaro,
+    .celesteclaro,
+    .salmonclaro,
+    .beigeclaro,
+    .cyanclaro,
+    .verdeclaro,
+    .violetaclaro,
+    .naranjaclaro,
+    .negro,
+    .marronclaro,
+    .celeste,
+    .beige,
+    .rosado h5,
+    .contenedor .pie,
+    .carousel-item img,
+    .carousel-item iframe,
+    .carousel-container,
+    .carousel-item
+     {
+        font-size: 0.4rem;
+    }
+} */
+
+
+
+
+/* Estilos para el carrusel */
+
+.column {
+    flex: 1; /* Hace que ambas columnas ocupen el mismo espacio */
+    overflow: hidden; /* Ev ita que el contenido desborde */
+    background-color: rgb(66, 61, 54);
+    padding-bottom: 25px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: burlywood;
+    border-radius: 20px;
+    
+}
+
+.carousel-item {
+    width: 100%;
+    height: 20%;
+    flex: 0 0 50%;
+}
+
+iframe {
+
+    width: 100%;
+    height: 29vh;
+    border-radius: 20px;
+    padding: 25px 25px 25px 25px;
+}
+
+.carousel-item iframe {
+    width: 100%;
+    height: 20%; 
+}
+
+.carousel-item img {
+    padding: 25px 25px 25px 25px;
+    width: 100%;
+    height: 29vh;
+    margin: 0 auto;
+    border-radius: 20px;
+} 
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f0e8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.resaltado {
+    color: #3d2c21; /* Color resaltado personalizado */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.presentacion{
+    background-color:  rgb(66, 61, 54);
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    color: #f6eeee;
+    line-height: 1.6;
+    padding-top: 15px;
+}
+.presentacion2{
+    padding-bottom: 20px;
+}

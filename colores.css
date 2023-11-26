@@ -1,0 +1,417 @@
+
+
+
+
+/* Estilos para .Codigo */
+.Codigo {
+    margin: 0;
+    display: inline; /* Asegura que todo el contenido esté en la misma línea */
+}
+
+/* Estilos comunes para el recuadro y la leyenda */
+.Recuadro-Leyenda {
+
+    color: yellow;
+    width: 60px; /* Ancho fijo del recuadro */
+    border-radius: 4px;
+    font-size: 0.5rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para .Codigo */
+.Codigo {
+    margin: 0;
+    display: inline; /* Asegura que todo el contenido esté en la misma línea */
+}
+/* Colores en español */
+.rojo {
+    background: red;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.azul {
+    background: blue;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.verde {
+    background: green;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.amarillo {
+    background: yellow;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.naranja {
+    background: lightsalmon;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.morado {
+    background: purple;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.rosado {
+    background: pink;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.turquesa {
+    background: teal;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.marron {
+    background: brown;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.carmesí {
+    background: crimson;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.oro {
+    background: gold;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.indigo {
+    background: indigo;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.granate {
+    background: maroon;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.grisplomo {
+    background: lightgray;
+    color: #000000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.naranjao {
+    background: darkorange;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+
+/* Colores Claros en español */
+.blanco {
+    background: white;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.grisclaro {
+    background: lightgray;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.azulclaro {
+    background: lightblue;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.verdeclaro {
+    background: lightgreen;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.amarilloclaro {
+    background: lightyellow;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.rosadoclaro {
+    background: lightpink;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.lilaclaro {
+    background: lavender;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.celesteclaro {
+    background: lightcyan;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.salmonclaro {
+    background: lightsalmon;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.beigeclaro {
+    background: beige;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.cyanclaro {
+    background: lightcyan;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.verdeclaro {
+    background: lightgreen;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.violetaclaro {
+    background: lavenderblush;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.naranjaclaro {
+    background: lightcoral;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.negro {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Marrón Claro */
+.marronclaro {
+    background: burlywood;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Celeste */
+.celeste {
+    background: lightblue;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1rem;
+    position: relative;
+}
+
+
+/* Beige */
+.beige {
+    background: beige;
+    color: #000;
+    padding: 2%;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+
+
+
+.Codigo h6 {
+    font-size: 16px; /* Tamaño de letra predeterminado */
+}
+
+.Codigo h6[data-text-length="1"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 1 carácter */
+}
+
+.Codigo h6[data-text-length="2"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 2 caracteres */
+}
+
+.Codigo h6[data-text-length="3"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 3 caracteres */
+}
+
+.Codigo h6[data-text-length="4"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 4 caracteres */
+}
+
+.Codigo h6[data-text-length="5"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 5 caracteres */
+}
+
+.Codigo h6[data-text-length="6"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 6 caracteres */
+}
+
+.Codigo h6[data-text-length="7"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 7 caracteres */
+}
+
+.Codigo h6[data-text-length="8"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 8 caracteres */
+}
+
+.Codigo h6[data-text-length="9"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 9 caracteres */
+}
+
+.Codigo h6[data-text-length="10"] {
+    font-size: 16px; /* Mantener el mismo tamaño de letra para 10 caracteres */
+}
+
+/* Reducir el tamaño de la letra para más de 10 caracteres */
+.Codigo h6[data-text-length="11"] {
+    font-size: 12px; /* Cambiar el tamaño de letra para más de 10 caracteres */
+}

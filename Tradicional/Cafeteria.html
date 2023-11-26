@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="../colores.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../Header.css">
+</head>
+
+
+
+<header>
+
+</header>
+
+<!-- Menu -->
+
+<section></section>
+            <div class="fila">
+
+                <div class="beige" onclick="autocompletar('16', 'Americano')">
+                    <div class="Codigo">
+                        <h5>16</h5>
+                    </div>
+                    <h5>Americano</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('48', 'Doble')">
+                    <div class="Codigo">
+                        <h5>48</h5>
+                    </div>
+                    <h5>Doble</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('49', 'Cafe Con Leche')">
+                    <div class="Codigo">
+                        <h5>49</h5>
+                    </div>
+                    <h5>Cafe Con Leche</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('52', 'Capuchino')">
+                    <div class="Codigo">
+                        <h5>52</h5>
+                    </div>
+                    <h5>Capuchino</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('53', 'Capuchino Italiano')">
+                    <div class="Codigo">
+                        <h5>53</h5>
+                    </div>
+                    <h5>Capuchino Italiano</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('62', 'Cafe Irlandes')">
+                    <div class="Codigo">
+                        <h5>62</h5>
+                    </div>
+                    <h5>Cafe Irlandes</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('1374', 'Jarra Francesa')">
+                    <div class="Codigo">
+                        <h5>1374</h5>
+                    </div>
+                    <h5>Jarra Francesa</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('2257', 'Latte')">
+                    <div class="Codigo">
+                        <h5>2257</h5>
+                    </div>
+                    <h5>Latte</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3350', 'Latte Caliente')">
+                    <div class="Codigo">
+                        <h5>3350</h5>
+                    </div>
+                    <h5>Latte Caliente</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3608', 'Latte Vainilla')">
+                    <div class="Codigo">
+                        <h5>3608</h5>
+                    </div>
+                    <h5>Latte Vainilla</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3609', 'Latte Chocolate')">
+                    <div class="Codigo">
+                        <h5>3609</h5>
+                    </div>
+                    <h5>Latte Chocolate</h5>
+                </div>
+                
+                <div class="beige" onclick="autocompletar('3610', 'Latte Caramel')">
+                    <div class="Codigo">
+                        <h5>3610</h5>
+                    </div>
+                    <h5>Latte Caramel</h5>
+                </div>
+
+                
+                
+                
+            </div>
+    </div>
+
+
+
+<!-- Formulario -->
+<form></form>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+<!-- Mantiene abierto el menu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menuButton");
+        const dropdownContent = document.querySelector(".dropdown-content");
+        let isOpen = false; // Variable para rastrear el estado del menú
+
+        menuButton.addEventListener("mouseenter", function (e) {
+            if (!isOpen) {
+                dropdownContent.style.display = "block";
+                dropdownContent.style.opacity = 1;
+                dropdownContent.style.pointerEvents = "auto";
+                isOpen = true; // Abre el menú en la primera interacción
+            } else {
+                dropdownContent.style.display = "none";
+                dropdownContent.style.opacity = 0;
+                dropdownContent.style.pointerEvents = "none";
+                isOpen = false; // Cierra el menú en la segunda interacción
+            }
+        });
+    });
+    </script>
+
+<!-- Botón de subir -->
+<a href="#top">
+    <div class="boton-subir">
+        <label for="showScrollButton">
+            <span>&#8593;</span>
+        </label>
+    </div>
+</a>
+
+<script>
+    window.addEventListener("scroll", function () {
+        var botonSubir = document.querySelector(".boton-subir");
+
+        // Si el usuario ha desplazado más de 300 píxeles hacia abajo, muestra el botón
+        if (window.scrollY > 300) {
+            botonSubir.style.display = "block";
+        } else {
+            botonSubir.style.display = "none";
+        }
+    });
+</script>
+
+<script src="./Js/header.js"></script>
+<script src="../Js/headerpaginas.js"></script>
+<script src="../Js/footer.js"></script>
+<script src="../Js/formulario.js"></script>
+<script src="../Js/head.js"></script>
+<script src="../Js/menu.js"></script>
+<script src="./Js/Java.Js"></script>
+<script src="../Js/auth.js"></script>
+
+</html>

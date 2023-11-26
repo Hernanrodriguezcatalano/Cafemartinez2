@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colores.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="Header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <title>Tarifas Precios</title>
+</head>
+
+
+
+<header>
+</header>
+
+
+<style>
+    @keyframes parpadeo {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .centrado {
+        text-align: center;
+        animation: parpadeo 2s infinite;
+    }
+</style>
+</head>
+<body>
+    <div class="centrado">
+        <h1>PÁGINA EN CONSTRUCCIÓN</h1>
+        <h1><i class="fa-solid fa-wrench fa-shake"></i></h1>
+    </div>
+    <script src="https://kit.fontawesome.com/7e96d60a4e.js" crossorigin="anonymous"></script>
+
+
+    <!-- Funcion -->
+    <script>
+        $(document).ready(function () {
+            $(".carousel-container").slick({
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true
+            });
+        });
+    </script>
+    <!--FIN Funcion -->
+
+<!--FIN Funcion -->
+<div class="container">
+    <div class="formulario">
+        <form class="contact-form" action="">
+            <fieldset>
+                <div class="form-group">
+                    <label for="Lista">Lista:</label>
+                    <select name="Lista" id="ListaForm" required>
+                        <option value="" disabled selected>Selecciona una lista</option>
+                        <option value="Lista C">Lista C</option>
+                        <option value="Lista B">Lista B</option>
+                        <option value="Lista B1">Lista B1</option>
+                        <option value="Lista A1">Lista A1</option>
+                        <option value="Lista A2">Lista A2</option>
+                        <!-- Agrega más opciones aquí -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Plataforma">Plataforma:</label>
+                    <select name="Plataforma" id="PlataformaForm" required>
+                        <option value="" disabled selected>Selecciona una plataforma</option>
+                        <option value="ICG">ICG</option>
+                        <option value="Foster">Foster</option>
+                        <option value="Menu Digital">Menu Digital</option>
+                        <option value="Menu QR">Menu QR</option>
+                        <option value="Club">Club</option>
+                        <!-- Agrega más opciones aquí -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="CodArt">Cod Art:</label>
+                    <input type="text" name="CodArt" id="CodArtForm" placeholder="Se autocompleta...." readonly required>
+                </div>
+                <div class="form-group">
+                    <label for="Articulo">Articulo:</label>
+                    <input type="text" name="Articulo" id="ArticuloForm" placeholder="Se autocompleta..." readonly required>
+                </div>
+                <div class="form-group">
+                    <label for="Precio">Precio:</label>
+                    <input type="number" name="Precio" id="PrecioForm" placeholder="Ingrese el precio correcto..." required>
+                </div>
+                <div class="form-group">
+                    <label for="Local">Local:</label>
+                    <input type="text" name="Local" id="LocalForm" placeholder="Nombre del local..." required>
+                </div>
+                <button type="button" class="submit-button" onclick="addToCart()">Agregar al carrito</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="plataforma">
+        <fieldset>
+            <legend>Carrito de compras</legend>
+            <ul id="cart-items">
+                <!-- Los elementos seleccionados se mostrarán aquí -->
+            </ul>
+            
+            <button id="export-button" class="submit-button" style="margin-top: 10px;">Exportar a Excel</button>
+
+        </fieldset>
+    </div>
+</div>
+
+<script>
+    const cartItems = document.getElementById('cart-items');
+    const addToCartButton = document.querySelector('.submit-button');
+
+    addToCartButton.disabled = true; // El botón estará deshabilitado hasta que se completen todos los campos.
+
+    function addToCart() {
+    const lista = document.getElementById('ListaForm').value;
+    const codArt = document.getElementById('CodArtForm').value;
+    const articulo = document.getElementById('ArticuloForm').value;
+    const precio = document.getElementById('PrecioForm').value;
+    const local = document.getElementById('LocalForm').value;
+
+    if (lista && codArt && articulo && precio && local) {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = ` ${lista}, Cod Art: ${codArt}, ${articulo}, <span class="price"> ${precio}</span>, ${local}`;
+        cartItems.appendChild(listItem);
+
+        // Borra solo los campos de "Código", "Artículo" y "Precio"
+        document.getElementById('CodArtForm').value = '';
+        document.getElementById('ArticuloForm').value = '';
+        document.getElementById('PrecioForm').value = '';
+
+        addToCartButton.disabled = true; // Deshabilita el botón después de agregar al carrito
+    } else {
+        alert('Por favor, complete todos los campos antes de agregar al carrito.');
+    }
+}
+
+    // Habilita el botón cuando todos los campos estén completos
+    document.getElementById('ListaForm').addEventListener('input', enableButton);
+    document.getElementById('CodArtForm').addEventListener('input', enableButton);
+    document.getElementById('ArticuloForm').addEventListener('input', enableButton);
+    document.getElementById('PrecioForm').addEventListener('input', enableButton);
+    document.getElementById('LocalForm').addEventListener('input', enableButton);
+
+    function enableButton() {
+        const lista = document.getElementById('ListaForm').value;
+        const codArt = document.getElementById('CodArtForm').value;
+        const articulo = document.getElementById('ArticuloForm').value;
+        const precio = document.getElementById('PrecioForm').value;
+        const local = document.getElementById('LocalForm').value;
+
+        if (lista && codArt && articulo && precio && local) {
+            addToCartButton.disabled = false;
+        } else {
+            addToCartButton.disabled = true;
+        }
+    }
+
+    // Función para autocompletar los campos del formulario
+    function autocompletar(codigo, nombre) {
+        const formularioArticuloSpan = document.getElementById('ArticuloForm');
+        const formularioCodArt = document.getElementById('CodArtForm');
+
+        // Actualiza los campos del formulario con los valores
+        formularioArticuloSpan.value = nombre;
+        formularioCodArt.value = codigo;
+    }
+
+    
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
+</main>
+
+
+
+<!-- Botón de subir -->
+<a href="#top">
+    <div class="boton-subir">
+        <label for="showScrollButton">
+            <span>&#8593;</span>
+        </label>
+    </div>
+</a>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<div class="contenedor">
+    <main class="contenido">
+
+
+        <!-- FIN Botón de subir -->
+    </main>
+</div>
+
+<!-- FOOTER -->
+
+<footer></footer>
+
+
+<link rel="stylesheet"
+    href="https://cafemartinez.vtexassets.com/_v/public/assets/v1/bundle/css/asset.min.css?v=3&amp;files=theme,cafemartinez.store@3.0.41$style.common,cafemartinez.store@3.0.41$style.small,cafemartinez.store@3.0.41$style.notsmall,cafemartinez.store@3.0.41$style.large,cafemartinez.store@3.0.41$style.xlarge&amp;files=fonts,ebda5b7f33d97a654d0dee0aac558a02d0c8b879&amp;files=npm,animate.css@3.7.0/animate.min.css&amp;files=react~vtex.render-runtime@8.134.1,common&amp;files=react~vtex.store-components@3.169.0,Container,4,SearchBar,Logo&amp;files=react~vtex.styleguide@9.146.9,0,1,Spinner&amp;files=react~vtex.admin-pages@4.51.2,HighlightOverlay&amp;files=react~vtex.modal-layout@0.14.1,0&amp;files=react~vtex.flex-layout@0.21.3,0&amp;files=react~vtex.rich-text@0.16.0,index&amp;files=react~cafemartinez.store@3.0.41,GlobalCss,NotificationBar,FormNewsletterPopUp&amp;files=react~vtex.login@2.57.0,1&amp;files=react~vtex.minicart@2.67.1,Minicart&amp;files=react~vtex.search@2.16.5,Autocomplete&amp;files=overrides,vtex.product-list@0.37.1$overrides,vtex.minicart@2.67.1$overrides,cafemartinez.store@3.0.41$overrides,cafemartinez.store@3.0.41$fonts&amp;workspace=master"
+    crossorigin="" class="vtex_io_uncritical_css" id="uncritical_style_0">
+
+
+<script>
+    window.addEventListener("scroll", function () {
+        var botonSubir = document.querySelector(".boton-subir");
+
+        // Si el usuario ha desplazado más de 300 píxeles hacia abajo, muestra el botón
+        if (window.scrollY > 300) {
+            botonSubir.style.display = "block";
+        } else {
+            botonSubir.style.display = "none";
+        }
+    });
+</script>
+<footer>
+
+</footer>
+
+
+<!-- Vinculos -->
+<script src="./Js/header.js"></script>
+<script src="./Js/footer.js"></script>
+<script src="../Js/formulario.js"></script>
+<script src="../Js/head.js"></script>
+<script src="../Js/menu.js"></script>
+<script src="./Js/Java.Js"></script>
+<script src="./Js/auth.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById("menuButton");
+    const dropdownContent = document.querySelector(".dropdown-content");
+    let isOpen = false; // Variable para rastrear el estado del menú
+
+    menuButton.addEventListener("mouseenter", function(e) {
+        if (!isOpen) {
+            dropdownContent.style.display = "block";
+            dropdownContent.style.opacity = 1;
+            dropdownContent.style.pointerEvents = "auto";
+            isOpen = true; // Abre el menú en la primera interacción
+        } else {
+            dropdownContent.style.display = "none";
+            dropdownContent.style.opacity = 0;
+            dropdownContent.style.pointerEvents = "none";
+            isOpen = false; // Cierra el menú en la segunda interacción
+        }
+    });
+});
+
+</script>
+
+
+
+</body>
+
+</html>
